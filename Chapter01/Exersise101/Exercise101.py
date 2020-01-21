@@ -1,3 +1,8 @@
+"""
+This python code contains basic text analytic functionaries
+"""
+
+
 sentence = 'The quick brown fox jumps over the lazy dog'
 print(sentence)
 
