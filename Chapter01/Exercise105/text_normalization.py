@@ -2,6 +2,7 @@
 This code will help in replacing the substring with another substring
  from the given string
 """
+# @author Muzaffar
 
 sentence = "I visited US from UK on 22-10-18"
 

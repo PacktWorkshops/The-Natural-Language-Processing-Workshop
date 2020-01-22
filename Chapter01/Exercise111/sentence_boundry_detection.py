@@ -1,3 +1,5 @@
+# @author Muzaffar
+
 from nltk.tokenize import sent_tokenize
 
 # The below code line will split the text into sentences.

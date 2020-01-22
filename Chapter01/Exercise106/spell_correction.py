@@ -1,3 +1,5 @@
+# @author Muzaffar
+
 from autocorrect import spell
 from nltk import word_tokenize
 
