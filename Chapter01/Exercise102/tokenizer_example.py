@@ -1,3 +1,5 @@
+# @author Muzaffar
+
 from nltk import word_tokenize
 
 """

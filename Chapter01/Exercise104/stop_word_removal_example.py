@@ -1,8 +1,10 @@
-import nltk
+# @author Muzaffar
+
+from nltk import  download
 
 # The below statement will download the stop word list
 # 'nltk_data/corpora/stopwords/' at home directory of your computer
-nltk.download('stopwords')
+download('stopwords')
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 """

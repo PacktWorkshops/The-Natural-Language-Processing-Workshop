@@ -1,3 +1,5 @@
+# @author Muzaffar
+
 from nltk import stem
 
 # create a object of porterStemmer class

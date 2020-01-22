@@ -1,4 +1,7 @@
+# @author Muzaffar
+
 from nltk import word_tokenize, pos_tag
+
 """
 This is an example code for generating pos tags of given text.
 """

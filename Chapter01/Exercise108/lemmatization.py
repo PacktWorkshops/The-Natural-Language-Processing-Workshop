@@ -1,5 +1,7 @@
-import nltk
-nltk.download('wordnet')
+# @author Muzaffar
+
+from nltk import download
+download('wordnet')
 from nltk.stem.wordnet import WordNetLemmatizer
 
 # create an object of WordNetLemmatizer class

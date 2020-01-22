@@ -1,13 +1,14 @@
-import nltk
-# nltk.download('punkt')
-# nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
-nltk.download('wordnet')
+# @author Muzaffar
+
+from nltk import download
+
+download('stopwords')
+download('wordnet')
 from nltk import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import stopwords
 from autocorrect import spell
-from nltk.wsd import lesk
+from nltk import stem, pos_tag
 from nltk.tokenize import sent_tokenize
 import string
 
@@ -46,7 +47,7 @@ print(corrected_sentence)
 print(corrected_word_list[:20])
 
 # Get pos tag of corrected word list
-print(nltk.pos_tag(corrected_word_list))
+print(pos_tag(corrected_word_list))
 
 # The code block below will remove the stop words
 # from the text.
@@ -61,7 +62,7 @@ print(corrected_word_list_without_stopwords[:20])
 # The code block below will get stem of word list
 # from above code.
 
-stemmer = nltk.stem.PorterStemmer()
+stemmer = stem.PorterStemmer()
 corrected_word_list_without_stopwords_stemmed = []
 for wd in corrected_word_list_without_stopwords:
     corrected_word_list_without_stopwords_stemmed.append(stemmer.stem(wd))
