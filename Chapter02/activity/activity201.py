@@ -47,7 +47,7 @@ def get_top_n_words(freq_dict, n):
 
 
 if __name__ == '__main__':
-    path = "../data/news_article.txt"
+    path = "../../data/news_article.txt"
     news_article = load_file(path)
     lower_case_news_art = to_lower_case(text=news_article)
     tokens = tokenize_text(lower_case_news_art)

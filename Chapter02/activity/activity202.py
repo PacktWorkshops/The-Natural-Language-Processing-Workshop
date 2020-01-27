@@ -113,7 +113,7 @@ def get_number_of_whitespaces(feature_df, data):
     return feature_df
 
 
-data = pd.read_csv('../data/data.csv', header=0)
+data = pd.read_csv('../../data/data.csv', header=0)
 
 feature_df = get_pos_occurrence_freq(data, tag_list)
 print(feature_df.head())
