@@ -1,2 +1,4 @@
 nltk
 autocorrect
+sklearn
+pandas
