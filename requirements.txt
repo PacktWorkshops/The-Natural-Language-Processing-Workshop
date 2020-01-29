@@ -2,3 +2,5 @@ nltk
 autocorrect
 sklearn
 pandas
+textblob
+spacy
