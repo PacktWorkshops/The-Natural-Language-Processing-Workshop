@@ -1,3 +1,5 @@
+# @author Muzaffar
+
 from nltk.wsd import lesk
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize
