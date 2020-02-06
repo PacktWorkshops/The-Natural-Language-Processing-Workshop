@@ -2,3 +2,4 @@
 *.pyc
 __init__.py
 venv/
+.ipynb_checkpoints/
