@@ -4,3 +4,4 @@ sklearn
 pandas
 textblob
 spacy
+jupyter
