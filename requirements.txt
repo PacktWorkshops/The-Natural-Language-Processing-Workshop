@@ -1,2 +1,10 @@
 nltk
 autocorrect
+sklearn
+pandas
+textblob
+spacy
+jupyter
+keras
+matplotlib
+wordcloud
