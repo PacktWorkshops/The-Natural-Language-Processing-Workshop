@@ -5,3 +5,5 @@ pandas
 textblob
 spacy
 jupyter
+wordcloud
+matplotlib
