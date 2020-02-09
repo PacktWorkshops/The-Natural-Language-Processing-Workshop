@@ -6,3 +6,5 @@ textblob
 spacy
 jupyter
 keras
+matplotlib
+wordcloud
