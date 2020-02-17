@@ -3,3 +3,5 @@
 __init__.py
 venv/
 .ipynb_checkpoints/
+data_ch6/glove/*
+docVecModel.d2v
