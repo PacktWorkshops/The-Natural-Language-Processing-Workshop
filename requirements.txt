@@ -1,4 +1,6 @@
 nltk
+numpy
+scipy
 autocorrect
 sklearn
 pandas
