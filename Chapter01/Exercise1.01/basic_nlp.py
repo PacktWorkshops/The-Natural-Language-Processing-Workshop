@@ -157,7 +157,7 @@ def get_word_reverse(text):
     """
     words = text.split()
     return ' '.join([word[::-1] for word in words])
-get_word_reverse('This is for unit testing')
+get_word_reverse(sentence)
 
 
 # In[60]:
