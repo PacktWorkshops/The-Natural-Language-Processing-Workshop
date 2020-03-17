@@ -1,42 +1,25 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 from nltk import word_tokenize
+import unittest
 
 
-# In[7]:
+# @author Muzaffar
 
 
 def get_tokens(sentence):
-    '''
-    This is a test case:
-    >>> get_tokens('The quick brown fox jumps over the lazy dog')
-    ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
-
-    '''
     words = word_tokenize(sentence)
     return words
-
-
-# In[8]:
 
 
 print(get_tokens("I am reading NLP Fundamentals."))
 
 
-# In[9]:
+class TestMethods(unittest.TestCase):
+
+    def test_get_tokens(self):
+        tokens = ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+        self.assertEqual(get_tokens('The quick brown fox jumps over the lazy dog'), tokens)
 
 
-import doctest
-
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()
