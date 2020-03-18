@@ -1,114 +1,61 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[ ]:
-
-
+import unittest
 from pathlib import Path
+import string
+import re
+import numpy as np
+from sklearn import preprocessing
+import warnings
+
+warnings.filterwarnings('ignore')
+
 data = Path('../data')
 novel_lines_file = data / 'novel_lines.txt'
-
-
-# In[ ]:
-
 
 with novel_lines_file.open() as f:
     novel_lines_raw = f.read()
 
-
-# In[ ]:
-
-
-novel_lines_raw
-
-
-# In[ ]:
-
-
-import string
-import re
- 
+print(novel_lines_raw)
 alpha_characters = str.maketrans('', '', string.punctuation)
- 
+
+
 def clean_tokenize(text):
-    """
-    >>> clean_tokenize("This ' is a \  cat")
-    ['this', 'is', 'a', 'cat']
-    """
     text = text.lower()
     text = re.sub(r'\n', '*** ', text)
     text = text.translate(alpha_characters)
     text = re.sub(r' +', ' ', text)
     return text.strip().split(' ')
- 
+
+
 novel_lines = clean_tokenize(novel_lines_raw)
 
+print(novel_lines)
 
-# In[ ]:
-
-
-novel_lines
-
-
-# In[ ]:
-
-
-import numpy as np
 novel_lines_array = np.array([novel_lines])
 novel_lines_array = novel_lines_array.reshape(-1, 1)
-novel_lines_array.shape
+print(novel_lines_array.shape)
 
-
-# In[ ]:
-
-
-from sklearn import preprocessing
- 
 labelEncoder = preprocessing.LabelEncoder()
 novel_lines_labels = labelEncoder.fit_transform(novel_lines_array)
- 
-import warnings
-warnings.filterwarnings('ignore')
- 
+
 wordOneHotEncoder = preprocessing.OneHotEncoder()
- 
-line_onehot = wordOneHotEncoder.fit_transform(novel_lines_labels.reshape(-1,1))
+
+line_onehot = wordOneHotEncoder.fit_transform(novel_lines_labels.reshape(-1, 1))
+
+print(novel_lines_labels)
+
+print(line_onehot)
+
+print(line_onehot.toarray())
 
 
-# In[ ]:
+class TestMethods(unittest.TestCase):
+
+    def test_clean_tokenize(self):
+        result = ['this', 'is', 'a', 'cat']
+        self.assertEqual(clean_tokenize("This ' is a \  cat"), result)
 
 
-novel_lines_labels
-
-
-# In[ ]:
-
-
-line_onehot
-
-
-# In[ ]:
-
-
-line_onehot.toarray()
-
-
-# In[ ]:
-
-
-import doctest
-
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()
