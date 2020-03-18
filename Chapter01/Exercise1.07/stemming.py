@@ -7,13 +7,13 @@ def get_stems(word, stemmer):
 
 
 porterStem = stem.PorterStemmer()
-get_stems("production", porterStem)
-get_stems("coming", porterStem)
-get_stems("firing", porterStem)
-get_stems("battling", porterStem)
+print(get_stems("production", porterStem))
+print(get_stems("coming", porterStem))
+print(get_stems("firing", porterStem))
+print(get_stems("battling", porterStem))
 
 snowball_stemmer = stem.SnowballStemmer("english")
-get_stems("battling", snowball_stemmer)
+print(get_stems("battling", snowball_stemmer))
 
 
 class TestMethods(unittest.TestCase):
