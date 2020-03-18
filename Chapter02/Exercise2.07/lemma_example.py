@@ -1,48 +1,28 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+import unittest
 
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-
-# In[2]:
-
-
 from nltk import word_tokenize
+
 nltk.download('wordnet')
 sentence = "The products produced by the process today are far better than what it produces generally."
-
-
-# In[3]:
-
-
 lemmatizer = WordNetLemmatizer()
+
+
 def get_lemmas(text):
-    '''
-    >>> get_lemmas('why are you going there')
-    'why are you going there'
-    '''
     return ' '.join([lemmatizer.lemmatize(word) for word in word_tokenize(text)])
 
 
-# In[4]:
+print(get_lemmas(sentence))
 
 
-get_lemmas(sentence)
+class TestMethods(unittest.TestCase):
+
+    def test_get_lemmas(self):
+        result = 'why are you going there'
+        self.assertEqual(get_lemmas('why are you going there'), result)
 
 
-# In[5]:
-
-
-import doctest
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()

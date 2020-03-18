@@ -11,9 +11,9 @@ def get_lemma(word):
     return lemmatizer.lemmatize(word)
 
 
-get_lemma('products')
-get_lemma('production')
-get_lemma('coming')
+print(get_lemma('products'))
+print(get_lemma('production'))
+print(get_lemma('coming'))
 
 
 class TestMethods(unittest.TestCase):

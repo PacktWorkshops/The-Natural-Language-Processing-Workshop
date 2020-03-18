@@ -1,64 +1,36 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+import unittest
 
 from keras.preprocessing.text import text_to_word_sequence
-from textblob import TextBlob
+from textblob import TextBlob, WordList
 
 
-# In[2]:
+def get_keras_tokens(text):
+    return text_to_word_sequence(text)
 
 
 sentence = 'Sunil tweeted, "Witnessing 70th Republic Day of India from Rajpath, New Delhi. Mesmerizing performancesby Indian Army! Awesome airshow! @india_official @indian_army #India #70thRepublic_Day. For more photos ping me sunil@photoking.com :)"'
 
-
-# In[3]:
-
-
-def get_keras_tokens(text):
-    """
-    >>> get_keras_tokens('This is a cat')
-    ['this', 'is', 'a', 'cat']
-    """
-    return text_to_word_sequence(text)
-
-
-# In[4]:
-
-
-get_keras_tokens(sentence)
-
-
-# In[5]:
+print(get_keras_tokens(sentence))
 
 
 def get_textblob_tokens(text):
-    """
-    >>> get_textblob_tokens('This is a cat')
-    WordList(['This', 'is', 'a', 'cat'])
-    """
     blob = TextBlob(text)
     return blob.words
 
 
-# In[6]:
+print(get_textblob_tokens(sentence))
 
 
-get_textblob_tokens(sentence)
+class TestMethods(unittest.TestCase):
+
+    def test_get_textblob_tokens(self):
+        tokens = ['This', 'is', 'a', 'cat']
+        self.assertEqual(get_textblob_tokens('This is a cat'), tokens)
+
+    def test_get_keras_tokens(self):
+        wrd = WordList(['This', 'is', 'a', 'cat'])
+        self.assertEqual(get_keras_tokens('This is a cat'), wrd)
 
 
-# In[7]:
-
-
-import doctest
-
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()

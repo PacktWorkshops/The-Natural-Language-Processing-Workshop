@@ -1,45 +1,23 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+import unittest
 
 from textblob import TextBlob
 
 
-# In[8]:
-
-
-def translate(text,from_l,to_l):
-    '''
-    >>> translate('Hello','en', 'es')
-    TextBlob("Hola")
-    '''
+def translate(text, from_l, to_l):
     en_blob = TextBlob(text)
     return en_blob.translate(from_lang=from_l, to=to_l)
 
 
-# In[9]:
+translate(text='muy bien', from_l='es', to_l='en')
+print(translate('Hello', 'en', 'es'))
 
 
-translate(text='muy bien',from_l='es',to_l='en')
+class TestMethods(unittest.TestCase):
+
+    def test_get_lemmas(self):
+        result = TextBlob("Hola")
+        self.assertEqual(translate('Hello', 'en', 'es'), result)
 
 
-# In[10]:
-
-
-translate('Hello','en', 'es')
-
-
-# In[11]:
-
-
-import doctest
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()

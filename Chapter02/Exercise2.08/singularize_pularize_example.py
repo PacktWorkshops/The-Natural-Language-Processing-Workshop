@@ -1,56 +1,35 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+import unittest
 
 from textblob import TextBlob
+
 sentence = TextBlob('She sells seashells on the seashore')
-
-
-# In[2]:
-
-
-sentence.words
-
-
-# In[3]:
+print(sentence.words)
 
 
 def singularize(word):
-    '''
-    >>> singularize(sentence.words[2])
-    'seashell'
-    '''
     return word.singularize()
 
 
-# In[4]:
-
-
-singularize(sentence.words[2])
-
-
-# In[5]:
+print(singularize(sentence.words[2]))
 
 
 def pillularize(word):
-    '''
-    >>> pillularize(sentence.words[5])
-    'seashores'
-    '''
     return word.pluralize()
 
 
-# In[6]:
+print(pillularize(sentence.words[5]))
 
 
-pillularize(sentence.words[5])
+class TestMethods(unittest.TestCase):
+
+    def test_singularize(self):
+        result = 'seashell'
+        self.assertEqual(singularize(sentence.words[2]), result)
+
+    def test_pillularize(self):
+        result = 'seashores'
+        self.assertEqual(pillularize(sentence.words[5]), result)
 
 
-# In[7]:
-
-
-import doctest
-doctest.testmod(verbose=True)
-
+if __name__ == '__main__':
+    unittest.main()
