@@ -1,71 +1,26 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from nltk import stem
+import unittest
 
 
-# In[2]:
-
-
-def get_stems(word,stemmer):
-    """
-    Test doc
-    >>> porterStem = stem.PorterStemmer()
-    >>> get_stems('during',porterStem)
-    'dure'
-    """
+def get_stems(word, stemmer):
     return stemmer.stem(word)
 
 
-# In[3]:
-
-
 porterStem = stem.PorterStemmer()
-
-
-# In[4]:
-
-
-get_stems("production",porterStem)
-
-
-# In[5]:
-
-
-get_stems("coming",porterStem)
-
-
-# In[6]:
-
-
-get_stems("firing",porterStem)
-
-
-# In[7]:
-
-
-get_stems("battling",porterStem)
-
-
-# In[8]:
-
+get_stems("production", porterStem)
+get_stems("coming", porterStem)
+get_stems("firing", porterStem)
+get_stems("battling", porterStem)
 
 snowball_stemmer = stem.SnowballStemmer("english")
+get_stems("battling", snowball_stemmer)
 
 
-# In[9]:
+class TestMethods(unittest.TestCase):
+    def test_get_stems(self):
+        porterStem = stem.PorterStemmer()
+        self.assertEqual(get_stems('during', porterStem), 'dure')
 
 
-get_stems("battling",snowball_stemmer)
-
-
-# In[10]:
-
-
-import doctest
-
-doctest.testmod(verbose=True)
-
+if __name__ == '__main__':
+    unittest.main()
