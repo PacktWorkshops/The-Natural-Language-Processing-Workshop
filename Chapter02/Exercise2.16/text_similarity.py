@@ -10,10 +10,7 @@ import numpy as np
 
 
 def extract_text_similarity_jaccard(text1, text2):
-    """
-    >>> round(extract_text_similarity_jaccard("This is a test string", "This is another test string"),2)
-    0.67
-    """
+   
     lemmatizer = WordNetLemmatizer()
 
     words_text1 = [lemmatizer.lemmatize(word.lower()) for word in word_tokenize(text1)]
@@ -36,10 +33,7 @@ extract_text_similarity_jaccard(pair3[0], pair3[1])
 
 
 def get_tf_idf_vectors(corpus):
-    """
-    >>>
-    0.4211322281532753
-    """
+  
     tfidf_vectorizer = TfidfVectorizer()
     tfidf_results = tfidf_vectorizer.fit_transform(corpus).todense()
     return tfidf_results
