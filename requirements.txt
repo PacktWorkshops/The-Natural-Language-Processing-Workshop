@@ -14,6 +14,7 @@ bert-extractive-summarizer==0.3.0
 python-Levenshtein==0.12.0
 wordcloud==1.6.0
 tweepy==3.8.0
+seaborn
 nltk
 scipy
 autocorrect
