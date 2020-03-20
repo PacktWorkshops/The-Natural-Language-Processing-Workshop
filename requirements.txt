@@ -21,7 +21,5 @@ autocorrect
 textblob
 jupyter
 keras
-wordcloud
-tomotopy
 =======
 
