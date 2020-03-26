@@ -4,7 +4,7 @@
 
 
 import pandas as pd
-data = pd.read_excel('data/Online Retail.xlsx')
+data = pd.read_excel('../data/Online Retail.xlsx')
 assert data.shape == tuple([541909, 8])
 print(data.shape)
 
@@ -57,10 +57,3 @@ print(data_ugf_q2.shape)
 
 
 print(data_ugf_q2_sample.shape)
-
-
-# In[ ]:
-
-
-
-

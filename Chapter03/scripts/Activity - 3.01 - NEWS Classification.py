@@ -3,7 +3,6 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -18,7 +17,7 @@ from sklearn.metrics import accuracy_score, roc_curve, classification_report, co
 
 
 
-data = pd.read_csv('data/news_political_dataset.csv')
+data = pd.read_csv('../data/news_political_dataset.csv')
 assert data.shape == tuple([69505, 3])
 print(data.sample(5))
 

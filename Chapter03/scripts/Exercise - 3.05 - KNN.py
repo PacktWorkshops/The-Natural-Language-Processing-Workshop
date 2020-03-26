@@ -1,11 +1,7 @@
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
 import re
 import string
 from nltk import word_tokenize
@@ -21,7 +17,7 @@ warnings.filterwarnings('ignore')
 # In[2]:
 
 
-review_data = pd.read_json('data/reviews_Musical_Instruments_5.json', lines=True)
+review_data = pd.read_json('../data/reviews_Musical_Instruments_5.json', lines=True)
 print(review_data[['reviewText', 'overall']].head())
 
 
