@@ -1,5 +1,5 @@
 The reader of this course should have a basic knowledge of the Python programming lenguage.
-He/she must have knowldge of data types in Python, should be able to write functions,
+He/she must have knowldge of data types in Python.He should be able to write functions,
  and also have the ability to import and use libraries and packages in Python. Familiarity
  with basic linguistics and probability is assumed although not required to fully
  complete this course.
