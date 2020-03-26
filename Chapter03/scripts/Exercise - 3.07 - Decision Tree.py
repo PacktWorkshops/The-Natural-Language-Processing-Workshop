@@ -5,7 +5,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
 import re
 import string
 from nltk import word_tokenize
@@ -21,7 +20,7 @@ warnings.filterwarnings('ignore')
 # In[2]:
 
 
-data_patio_lawn_garden = pd.read_json('data/reviews_Patio_Lawn_and_Garden_5.json', lines = True)
+data_patio_lawn_garden = pd.read_json('../data/reviews_Patio_Lawn_and_Garden_5.json', lines = True)
 print(data_patio_lawn_garden[['reviewText', 'overall']].head())
 
 
