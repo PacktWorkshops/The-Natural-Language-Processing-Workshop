@@ -3,7 +3,6 @@
 import pandas as pd
 from sklearn.datasets import fetch_20newsgroups
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
 import re
 import string
 from nltk import word_tokenize
