@@ -80,8 +80,9 @@ show_vector('sad')
 class TestMethods(unittest.TestCase):
 
     def test_get_similar(self):
-        result = 'narrower'
-        self.assertEqual(get_similar('worse'), result)
+        result = ['better', 'kinder', 'more', 'narrower', 'older', 'happier',
+                  'handsomer', 'fewer', 'mightier', 'larger']
+        self.assertIn(get_similar('worse'), result)
 
     def test_to_sentences(self):
         result = [['this', 'is', 'an', 'example', 'sentence'], ['this', 'is', 'another', 'example', 'sentence']]
