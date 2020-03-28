@@ -13,13 +13,12 @@ import matplotlib as mpl
 
 mpl.rcParams['figure.dpi'] = 300
 
-text = open('../data/text_corpus.txt', 'r').read()
+text = open('../data/text_corpus.txt', 'r', encoding="utf8").read()
 
 print(text[:1040])
 
 
 def lemmatize_and_clean(text):
-
     nltk.download('wordnet')
     lemmatizer = WordNetLemmatizer()
     cleaned_lemmatized_tokens = [lemmatizer.lemmatize(word.lower()) for word in

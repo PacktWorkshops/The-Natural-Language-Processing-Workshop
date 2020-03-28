@@ -1,99 +1,51 @@
-#!/usr/bin/env python
-# coding: utf-8
+import unittest
 
-# In[ ]:
-
-
-import warnings
-warnings.filterwarnings("ignore")
- 
 from gensim.models import Doc2Vec
 import pandas as pd
-from gensim.parsing.preprocessing import preprocess_string, remove_stopwords 
 
+from IPython.core.display import display
 
-# In[ ]:
+from gensim.parsing.preprocessing import preprocess_string
 
+import warnings
+
+warnings.filterwarnings("ignore")
 
 news_file = '../data/sample_news_data.txt'
 with open(news_file, encoding="utf8", errors='ignore') as f:
     news_lines = [line for line in f.readlines()]
 
-
-# In[ ]:
-
-
 lines_df = pd.DataFrame()
-indices  = list(range(len(news_lines)))
+indices = list(range(len(news_lines)))
 lines_df['news'] = news_lines
 lines_df['index'] = indices
 
+display(lines_df.head())
 
-# In[ ]:
-
-
-lines_df.head()
+docVecModel = Doc2Vec.load('../data/docVecModel.d2v')
 
 
-# In[ ]:
-
-
-docVecModel = Doc2Vec.load('../../data/docVecModel.d2v')
-
-
-# In[ ]:
-
-
-from gensim.parsing.preprocessing import preprocess_string, remove_stopwords
- 
 def to_vector(sentence):
-    """
-    >>> to_vector("US raise TV indecency US politicians are").mean()
-    -0.0018694705
-    """
-    
     cleaned = preprocess_string(sentence)
     docVector = docVecModel.infer_vector(cleaned)
     return docVector
- 
+
+
 def similar_news_articles(sentence):
-    """
-    >>> similar_news_articles("US president in India ").index[0]
-    925
-    """
     vector = to_vector(sentence)
     similar_vectors = docVecModel.docvecs.most_similar(positive=[vector])
-    similar_lines = lines_df[lines_df.index==similar_vectors[0][0]].news
+    similar_lines = lines_df[lines_df.index == similar_vectors[0][0]].news
     return similar_lines
 
 
-# In[ ]:
+class TestMethods(unittest.TestCase):
+
+    def test_to_vector(self):
+        result = -0.0018694705
+        # Using delta here because uncertainty in the doc2Vev vectors
+        self.assertAlmostEqual(to_vector("US raise TV indecency US politicians are").mean(),
+                               result, delta=0.01)
 
 
-similar_news_articles("US raise TV indecency US politicians are proposing a tough new law aimed at cracking down on indecency")
-
-
-# In[ ]:
-
-
-import doctest
-doctest.testmod(verbose=True)
-
-
-# In[ ]:
-
-
-to_vector("US raise TV indecency US politicians are").mean()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+if __name__ == '__main__':
+    unittest.main()

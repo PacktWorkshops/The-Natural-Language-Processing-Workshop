@@ -15,7 +15,7 @@ from nltk.corpus import stopwords
 
 def load_file(file_path):
     # load the new article
-    news = ''.join([line for line in open(file_path)])
+    news = ''.join([line for line in open(file_path, encoding="utf8")])
     return news
 
 
