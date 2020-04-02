@@ -6,7 +6,7 @@
 
 2. Create a virtual environment by any of the following command:
 
-   `conda create -n nlp-env python=3.6 (If using Anaconda distribution)`
+   `conda create -n nlp-env python=3.7 (If using Anaconda distribution)`
    
    `conda activate nlp-env`
    
