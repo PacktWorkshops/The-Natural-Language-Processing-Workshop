@@ -13,9 +13,8 @@ transformers==2.4.1
 bert-extractive-summarizer==0.3.0
 wordcloud==1.6.0
 tweepy==3.8.0
-punkt
 seaborn
-nltk
+nltk==3.5
 scipy
 autocorrect
 textblob
