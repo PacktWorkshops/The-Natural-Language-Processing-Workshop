@@ -27,8 +27,8 @@ The [Natural Language Processing Workshop](https://www.amazon.com/Natural-Langua
 
 ## Related Workshops
 If you've found this repository useful, you might want to check out some of our other workshop titles:
-* [The Computer Vision Workshop](https://www.amazon.com/Computer-Vision-Workshop-algorithms-intelligence-ebook/dp/B08C5JT2YL/ref=sr_1_1?crid=JEVIOQNFZ59M&dchild=1&keywords=the+computer+vision+workshop&qid=1611123658&sprefix=the+computer+vi%2Caps%2C382&sr=8-1)
-* [The Machine Learning Workshop](https://www.amazon.com/Machine-Learning-Workshop-high-performance-scikit-learn-ebook/dp/B08QVYQSZ8/ref=sr_1_1?dchild=1&keywords=the+machine+learning+workshop&qid=1611123687&sr=8-1)
-* [The Applied AI and Natural Language Processing Workshop](https://www.amazon.com/Applied-Natural-Language-Processing-Workshop-ebook/dp/B08Q8GNTGT/ref=sr_1_1?crid=3CFVJJ0U31SW3&dchild=1&keywords=the+applied+ai+and+natural+language+processing+workshop&qid=1611123758&sprefix=applied+ai+and++workshop%2Caps%2C377&sr=8-1)
+* [The Computer Vision Workshop](https://www.amazon.com/Computer-Vision-Workshop-algorithms-intelligence-dp-180020177X/dp/180020177X/ref=mt_other?_encoding=UTF8&me=&qid=1611064944&utm_source=github&utm_medium=repository&utm_campaign=9781800201774&utm_term=Computer%20Vision&utm_content=The%20Computer%20Vision%20Workshop)
+* [The Machine Learning Workshop](https://www.amazon.com/Machine-Learning-Workshop-high-performance-scikit-learn/dp/1839219068/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1611061956&sr=1-1&utm_source=github&utm_medium=repository&utm_campaign=9781801070065&utm_term=Machine%20Learning&utm_content=The%20Machine%20Learning%20Workshop)
+* [The Applied AI and Natural Language Processing Workshop](https://www.amazon.com/Applied-Natural-Language-Processing-Workshop-ebook/dp/B08Q8GNTGT/ref=sr_1_1?dchild=1&keywords=The%20Applied%20AI%20and%20Natural%20Language%20Processing%20Workshop&qid=1610976605&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801071307&utm_term=Applied%20AI%20and%20Natural%20Language%20Processing&utm_content=The%20Applied%20AI%20and%20Natural%20Language%20Processing%20Workshop)
 
    
