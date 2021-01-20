@@ -8,39 +8,11 @@
 This is the repository for [The Natural Language Processing Workshop](https://www.amazon.com/Natural-Language-Processing-Workshop-understand/dp/1800208421/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1611057842&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801077811&utm_term=Natural%20Language%20Processing&utm_content=The%20Natural%20Language%20Processing%20Workshop), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://www.amazon.com/Natural-Language-Processing-Workshop-understand/dp/1800208421/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1611057842&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801077811&utm_term=Natural%20Language%20Processing&utm_content=The%20Natural%20Language%20Processing%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16062_The%20Natural%20Language%20Processing%20Workshop.png" alt="The Natural Language Processing Workshop" height="360px" width="250px" align="right" this.target="_blank"></a>
+<a href="https://www.amazon.com/Natural-Language-Processing-Workshop-understand/dp/1800208421/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1611057842&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801077811&utm_term=Natural%20Language%20Processing&utm_content=The%20Natural%20Language%20Processing%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/B16062_The%20Natural%20Language%20Processing%20Workshop.png" alt="The Natural Language Processing Workshop" height="290px" width="230px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
 1. Install Jupyter on [Windows](https://www.python.org/downloads/windows/), [Mac](https://www.python.org/downloads/mac-osx/), [Linux](https://www.python.org/downloads/source/)
 2. Install Anaconda on [Windows](https://www.anaconda.com/distribution/#windows), [Mac](https://www.anaconda.com/distribution/#macos), [Linux](https://www.anaconda.com/distribution/#linux)
-
-### Prerequisites for The-Natural-Language-Processing-Workshop
-
-1. Download and Install Python using [Anaconda Distribution](https://www.anaconda.com/distribution/)
-
-2. Create a virtual environment by any of the following command:
-
-   `conda create -n nlp-env python=3.7 (If using Anaconda distribution)`
-   
-   `conda activate nlp-env`
-   
-   or
-   
-   `python -m venv nlp-env`
-   
-   `.\nlp-env\Scripts\activate (Windows)`
-   
-   `source nlp-env/bin/activate    (Linux or macOS)`
-
-3. Install all the required packages by running the following command 
-
-   "pip install -r requirements.txt"
-     
-4. Download all the NLTK packages using the following command:
-   nltk.download()
-   
-5. Download the SpaCy model using the following command:
-   python -m spacy download en_core_web_sm
 
 ## About The Natural Language Processing Workshop
 The Natural Language Processing Workshop takes you through fundamental NLP techniques, such as preparing datasets, collecting text, extracting text, and sentiment analysis. As you progress, you’ll get to grips with creating your own chatbots and dynamic models.
