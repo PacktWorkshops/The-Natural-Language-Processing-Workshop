@@ -15,7 +15,7 @@ To get started with the project files, you'll need to:
 2. Install Anaconda on [Windows](https://www.anaconda.com/distribution/#windows), [Mac](https://www.anaconda.com/distribution/#macos), [Linux](https://www.anaconda.com/distribution/#linux)
 
 ## About The Natural Language Processing Workshop
-The Natural Language Processing Workshop takes you through fundamental NLP techniques, such as preparing datasets, collecting text, extracting text, and sentiment analysis. As you progress, you’ll get to grips with creating your own chatbots and dynamic models.
+The [Natural Language Processing Workshop](https://www.amazon.com/Natural-Language-Processing-Workshop-understand/dp/1800208421/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1611057842&sr=8-1&utm_source=github&utm_medium=repository&utm_campaign=9781801077811&utm_term=Natural%20Language%20Processing&utm_content=The%20Natural%20Language%20Processing%20Workshop) takes you through fundamental NLP techniques, such as preparing datasets, collecting text, extracting text, and sentiment analysis. As you progress, you’ll get to grips with creating your own chatbots and dynamic models.
 
 ## What you will learn
 * Obtain, verify, clean and transform text data into a correct format for use 
